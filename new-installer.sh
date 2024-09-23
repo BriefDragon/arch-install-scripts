@@ -2,6 +2,7 @@
 #cat ~/Installer-Scripts/own-installer/art-input.txt
 #echo
 # Partition
+rm ~/arch-install-scripts/README.md
 lsblk
 read -p "Bitte gebe deine Root-Partition ein wie im folgenden Beispiel (z.b. /dev/sda3). Das Kannst du mit der liste über dir herrauslesen. Sei dir bitte sicher, dass es richtig ist und notier dir auch ruhig die anderen Partitionen.: " Haupt
     mkfs.ext4 "$Haupt"
