@@ -51,9 +51,9 @@ then
     then 
         pacstrap -K /mnt base linux linux-firmware grub efibootmgr networkmanager neofetch sof-firmware base-devel git sudo $text "$cpu"-ucode $terminal firefox dolphin hyprland hyprpaper waybar system-config-printer cups cups-pdf mesa vulkan-radeon 
     elif [[$gpu == intel]]
+    then
         pacstrap -K /mnt base linux linux-firmware grub efibootmgr networkmanager neofetch sof-firmware base-devel git sudo $text "$cpu"-ucode $terminal firefox dolphin hyprland hyprpaper waybar system-config-printer cups cups-pdf mesa intel-vulkan 
-    then 
-    fi
+    #fi
     #Abfrage Dotfiles (WIP)
 fi 
 genfstab /mnt > /mnt/etc/fstab
