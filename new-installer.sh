@@ -21,7 +21,8 @@ read -p "Bitte jetzt als letztes die Boot Partition auch im selben Schema.: " St
 read -p "Welchen Text Editor willst du haben?: " text
 read -p "von Wem wurde deine CPU Hergestellt? amd oder intet?: " cpu
 read -p "Welchen Terminal-emulator(Also der Weg um das Terminal in einer DE/WM umgebung zu nutzen) moechtest du haben? konsole, alacritty oder was anderes (dann bitte pkg-name angeben)?: " terminal
-if [[$WMDE == WM]]
+read -p "Möchtest du eine Desktop Environment (Windows Like) oder ein reinen Window Manager (DE oder WM)" WMDE
+if [[$WMDE == DE]]
 then
     read -p "Welchen GPU Hersteller nutzt du?: " gpu
     if [[$gpu == nvidia]] 
