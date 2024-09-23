@@ -1,7 +1,7 @@
 #!bin/bash 
-cat ~/Installer-Scripts/own-installer/art-input.txt
-echo
-#Partition
+#cat ~/Installer-Scripts/own-installer/art-input.txt
+#echo
+# Partition
 lsblk
 read -p "Bitte gebe deine Root-Partition ein wie im folgenden Beispiel (z.b. /dev/sda3). Das Kannst du mit der liste über dir herrauslesen. Sei dir bitte sicher, dass es richtig ist und notier dir auch ruhig die anderen Partitionen.: " Haupt
     mkfs.ext4 "$Haupt"
@@ -54,3 +54,9 @@ then
     fi
     #Abfrage Dotfiles (WIP)
 fi 
+genfstab /mnt > /mnt/etc/fstab
+mkdir /mnt/root/install-scripts
+mkdir /mnt/root/install-scritps/arch
+cp -r ~/arch-install-scripts /mnt/root/install-scripts/arch #Install-Scripts spaeter tauschen. #Please look what you write.  i have revisited this code 3 times and only now i see why the old version was loaded that i have written on the iso. I thought there were a bug but noooo. it loaded the old god daam version and i want to sleep. its 23:50 rn. i cant do this anymore.
+arch-chroot /mnt /bin/bash /root/install-scripts/arch/new-chrootteil.sh
+#ende dieses Teils 
