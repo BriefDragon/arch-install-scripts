@@ -59,6 +59,6 @@ fi
 genfstab /mnt > /mnt/etc/fstab
 mkdir /mnt/root/install-scripts
 mkdir /mnt/root/install-scritps/arch
-cp -r ~/arch-install-scripts /mnt/root/install-scripts/arch #Install-Scripts spaeter tauschen. #Please look what you write.  i have revisited this code 3 times and only now i see why the old version was loaded that i have written on the iso. I thought there were a bug but noooo. it loaded the old god daam version and i want to sleep. its 23:50 rn. i cant do this anymore.
+cp -r ~/arch-install-scripts /mnt/root/arch-install-scripts/arch #Install-Scripts spaeter tauschen. #Please look what you write.  i have revisited this code 3 times and only now i see why the old version was loaded that i have written on the iso. I thought there were a bug but noooo. it loaded the old god daam version and i want to sleep. its 23:50 rn. i cant do this anymore.
 arch-chroot /mnt /bin/bash /root/install-scripts/arch/new-chrootteil.sh
 #ende dieses Teils 
